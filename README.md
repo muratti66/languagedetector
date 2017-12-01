@@ -15,7 +15,7 @@ Language Detector is a natural language processing application used in machine l
   
 ### Preperation :
   - First you need to have java 1.8 and netbeans on your system
-  - Download the project and open it with NetBeans
+  - Download the language detector project and open it with NetBeans
   - Generated following files copy in to "/opt/LanguageDetector" path
     - config.cfg
     - langdetect.service
@@ -33,6 +33,27 @@ systemctl daemon-reload
 systemctl start langdetect
 ```
   - Check the logs in "/var/log/languagedetector.log" log file
+```sh
+$ tail -f /var/log/languagedetector.log
+01-12-2017 10:54:19 INFO  com.datumbox.framework.core.common.dataobjects.Dataframe$Builder.parseTextFiles - Dataset Parsing English class
+01-12-2017 10:54:19 INFO  com.datumbox.framework.core.common.dataobjects.Dataframe$Builder.parseTextFiles - Dataset Parsing Italian class
+01-12-2017 10:54:19 INFO  com.datumbox.framework.core.common.dataobjects.Dataframe$Builder.parseTextFiles - Dataset Parsing Russian class
+01-12-2017 10:54:19 INFO  com.datumbox.framework.core.common.dataobjects.Dataframe$Builder.parseTextFiles - Dataset Parsing French class
+01-12-2017 10:54:19 INFO  com.datumbox.framework.core.common.dataobjects.Dataframe$Builder.parseTextFiles - Dataset Parsing Deutsche class
+01-12-2017 10:54:19 INFO  com.datumbox.framework.core.common.dataobjects.Dataframe$Builder.parseTextFiles - Dataset Parsing Turkish class
+01-12-2017 10:54:20 INFO  com.datumbox.framework.applications.nlp.TextClassifier.fit - fit()
+01-12-2017 10:54:20 INFO  com.datumbox.framework.core.machinelearning.featureselection.ChisquareSelect.fit - fit()
+01-12-2017 10:54:21 INFO  com.datumbox.framework.core.machinelearning.featureselection.ChisquareSelect.transform - transform()
+01-12-2017 10:54:21 INFO  com.datumbox.framework.core.machinelearning.classification.MultinomialNaiveBayes.fit - fit()
+01-12-2017 10:54:21 INFO  com.datumbox.framework.applications.nlp.TextClassifier.save - save()
+01-12-2017 10:54:21 INFO  com.datumbox.framework.core.machinelearning.preprocessing.CornerConstraintsEncoder.save - save()
+01-12-2017 10:54:21 INFO  com.datumbox.framework.core.machinelearning.featureselection.ChisquareSelect.save - save()
+01-12-2017 10:54:21 INFO  com.datumbox.framework.core.machinelearning.classification.MultinomialNaiveBayes.save - save()
+01-12-2017 10:54:46 INFO  com.datumbox.framework.applications.nlp.TextClassifier.predict - predict()
+01-12-2017 10:54:46 INFO  com.datumbox.framework.core.machinelearning.featureselection.ChisquareSelect.transform - transform()
+01-12-2017 10:54:46 INFO  com.datumbox.framework.core.machinelearning.classification.MultinomialNaiveBayes.predict - predict()
+01-12-2017 10:54:52 INFO  com.datumbox.framework.applications.nlp.TextClassifier.predict - predict()
+```
   - Finally port control : 
 ```sh
 $ netstat -ant| grep 8181
@@ -91,4 +112,4 @@ Changes :
 License
 ----
 
-GNU
+MIT
