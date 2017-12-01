@@ -5,9 +5,18 @@ Language Detector is a natural language processing application used in machine l
 ### Features :
   - It works quickly and easily because a socket program
   - Exemplary data are in the project
-  - Most commonly used six language supported (Deutsche, English, French, Italian, Russian, Turkish)
+  - Most commonly used seven language supported 
   - Lowest resource alocation
   - IPv6 and IPv4 supported
+
+### Supported Language :
+  - Deutsche 
+  - English
+  - French
+  - Italian
+  - Russian
+  - Spanish
+  - Turkish
 
 ### Supported OS :
   - Linux
@@ -101,6 +110,7 @@ Changes :
    - [Wikipedia French](https://fr.wikipedia.org/wiki/Français)
    - [Wikipedia Italian](https://it.wikipedia.org/wiki/Lingua_italiana)
    - [Wikipedia Russian](https://ru.wikipedia.org/wiki/Русский_язык)
+   - [Wikipedia Spanish](https://es.wikipedia.org/wiki/Idioma_español)
    - [Wikipedia Turkish](https://tr.wikipedia.org/wiki/Türkçe)
 
 ### To do :
