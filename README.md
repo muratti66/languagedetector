@@ -45,6 +45,12 @@ Example with netcat :
 ```sh
 $ echo "hello how are you ? what is your name, im file" | nc 127.0.0.1 8181
 100;;English;;0.9934262621714024
+echo "merhaba dünya istanbul ankara nasıl araba" | nc 127.0.0.1 8181
+100;;Turkish;;0.8612241376734291
+$ echo "Привет, как вы, ваше имя?" | nc 127.0.0.1 8181
+100;;Russian;;0.9699016241097704
+$ echo "Ciao, come stai, il tuo nome?" | nc 127.0.0.1 8181
+100;;Italian;;0.9945782711354506
 ```
 The returned data is seperating with ";;".
 First space is return code. These codes correspond to the following situations:
