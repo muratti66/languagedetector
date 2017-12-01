@@ -1,0 +1,17 @@
+[Unit]
+Description=Language Detector Service
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+WorkingDirectory=/opt/LanguageDetector
+Environment='HEAP_MAX=128'
+Environment="HEAP_MIN=256"
+ExecStart=/usr/bin/java -d64 -jar -Xms${HEAP_MIN}m -Xmx${HEAP_MAX}m /opt/LanguageDetector/LanguageDetector-1.0-SNAPSHOT.jar
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
